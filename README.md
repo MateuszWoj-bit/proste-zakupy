@@ -10,6 +10,12 @@ Prosta aplikacja webowa do tworzenia listy zakupów. Umożliwia dodawanie, odhac
 - 💾 Automatyczne zapisywanie listy w przeglądarce
 - 📱 Responsywny i minimalistyczny design (Tailwind CSS)
 
+## 🔗 Demo
+
+Zobacz działającą aplikację tutaj:
+👉 [https://mateuszwoj-bit.github.io/proste-zakupy/](https://mateuszwoj-bit.github.io/proste-zakupy/)
+
+
 ## 🔧 Jak uruchomić
 
 1. Pobierz lub sklonuj repozytorium:
