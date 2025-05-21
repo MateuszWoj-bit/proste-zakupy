@@ -99,6 +99,48 @@ confirmModal.addEventListener('click', (e) => {
   }
 });
 
+const exportBtn = document.getElementById('exportBtn');
+const importInput = document.getElementById('importInput');
 
+exportBtn.onclick = () => {
+  const blob = new Blob([JSON.stringify(items, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'lista-zakupow.json';
+  a.click();
+
+  URL.revokeObjectURL(url);
+};
+
+importInput.onchange = (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const importedItems = JSON.parse(reader.result);
+      if (Array.isArray(importedItems)) {
+        const cleanedItems = importedItems.map(item => ({
+          text: item.text || '',
+          done: !!item.done
+        }));
+
+        items = [...items, ...cleanedItems];
+
+        saveList();
+        renderList();
+        alert(`Zaimportowano ${cleanedItems.length} pozycji.`);
+      } else {
+        alert("Nieprawidłowy format pliku.");
+      }
+    } catch (err) {
+      alert("Błąd podczas importu: " + err.message);
+    }
+  };
+  reader.readAsText(file);
+};
 
 
