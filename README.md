@@ -45,3 +45,6 @@ JavaScript (Vanilla)
 
 localStorage API
 ```
+
+   ## 📜 Licencja
+Projekt na licencji MIT – możesz go dowolnie używać, kopiować i modyfikować.
