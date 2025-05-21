@@ -30,6 +30,7 @@ Prosta aplikacja webowa do tworzenia listy zakupów. Umożliwia dodawanie, odhac
 └── README.md          # Dokumentacja
 ```
   ## 📚 Technologie
+```
 HTML5
 
 Tailwind CSS (CDN)
@@ -37,3 +38,4 @@ Tailwind CSS (CDN)
 JavaScript (Vanilla)
 
 localStorage API
+```
