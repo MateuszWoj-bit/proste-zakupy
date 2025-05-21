@@ -76,7 +76,7 @@ const cancelBtn = document.getElementById('cancelBtn');
 clearCheckedBtn.onclick = () => {
   const hasChecked = items.some(item => item.done);
   if (!hasChecked) {
-    alert("There are no checked items to clear.");
+    alert("Brak zaznaczonych pozycji do usunięcia.");
     return;
   }
   confirmModal.classList.remove('hidden');
